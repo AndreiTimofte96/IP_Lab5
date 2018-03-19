@@ -1,13 +1,21 @@
-public class MarketPlace{
-    private static MarketPlace instance = null;
+import java.util.Vector;
 
-    private MarketPlace(){
-    }
+public class MarketPlace {
 
-    public static MarketPlace getInstance(){
-        if (instance == null)
-            instance = new MarketPlace();
-        return instance;
-    }
+  private MarketPlace instance;
+
+  public java.util.Vector users;
+
+  public java.util.Vector productCollection;
+
+    public Vector  myProduct;
+    public Vector  myUser;
+
+  public MarketPlace getInstance() {
+  return null;
+  }
+
+  public void getUser(Integer id) {
+  }
 
 }

@@ -20,10 +20,11 @@ public class MarketPlace {
     }
 
     public User getUser(Integer id) {
-        List<User> list = users.stream().collect(Collectors.toList());
+        ArrayList<User> list = new ArrayList<User>(users);
         for (User user : list)
             if (user.getId() == id)
                 return user;
+        return null;
     }
 
     public static void setInstance(MarketPlace instance) {

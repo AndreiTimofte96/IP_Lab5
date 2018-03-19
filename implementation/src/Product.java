@@ -7,7 +7,4 @@ public class Product {
   public Integer price;
 
   public Integer id;
-
-    public Vector  myMarketPlace;
-
 }

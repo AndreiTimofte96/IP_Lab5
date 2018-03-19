@@ -1,21 +1,60 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
+import java.util.stream.Collectors;
 
 public class MarketPlace {
+    private static MarketPlace instance = null;
+    private java.util.Vector users;
+    private java.util.Vector productCollection;
 
-  private MarketPlace instance;
+    private MarketPlace() {
+        users = new Vector();
+        productCollection = new Vector();
+    }
 
-  public java.util.Vector users;
+    public static MarketPlace getInstance() {
+        if (instance == null)
+            instance = new MarketPlace();
+        return instance;
+    }
 
-  public java.util.Vector productCollection;
+    public User getUser(Integer id) {
+        List<User> list = users.stream().collect(Collectors.toList());
+        for (User user : list)
+            if (user.getId() == id)
+                return user;
+    }
 
-    public Vector  myProduct;
-    public Vector  myUser;
+    public static void setInstance(MarketPlace instance) {
+        MarketPlace.instance = instance;
+    }
 
-  public MarketPlace getInstance() {
-  return null;
-  }
+    public Vector getUsers() {
+        return users;
+    }
 
-  public void getUser(Integer id) {
-  }
+    public void setUsers(Vector users) {
+        this.users = users;
+    }
 
+    public void addUser(User user) {
+        users.add(user);
+    }
+
+    public Vector getProductCollection() {
+        return productCollection;
+    }
+
+    public void setProductCollection(Vector productCollection) {
+        this.productCollection = productCollection;
+    }
+
+    @Override
+    public String toString() {
+        return "MarketPlace{" +
+                "users=" + users +
+                ", productCollection=" + productCollection +
+                '}';
+    }
 }

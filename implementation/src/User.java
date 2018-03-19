@@ -17,4 +17,8 @@ public class User {
   public void removeProduct(Integer id) {
   }
 
+  public Integer getId(){
+      return id;
+  }
+
 }

@@ -2,19 +2,21 @@ import java.util.Vector;
 
 public class User {
 
-  public String name;
-  public Cart cart;
-  public Integer id;
+    public String name;
+    public Cart cart;
+    public Integer id;
 
-  public void addProduct(Integer id) {
-    cart.addProduct()
-  }
+    public void addProduct(Integer id) {
 
-  public void removeProduct(Integer id) {
-  }
+        cart.addProduct();
+    }
 
-  public Integer getId(){
-      return id;
-  }
+    public void removeProduct(Integer id) {
+
+    }
+
+    public Integer getId() {
+        return id;
+    }
 
 }
